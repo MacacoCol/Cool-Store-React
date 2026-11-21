@@ -95,83 +95,93 @@ button {
 
 .error {
   color: #ff6b6b;
-  .categorias {
-    margin-top: 32px;
-    padding: 16px;
-    background: #1e1e1e;
-    border-radius: 8px;
-  }
+}
 
-  .categorias ul {
-    padding: 0;
-    list-style: none;
-  }
+/* ---------- Categorías ---------- */
+.categorias {
+  margin-top: 32px;
+  padding: 16px;
+  background: #1e1e1e;
+  border-radius: 8px;
+}
 
-  .categorias li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    padding: 8px 0;
-    border-bottom: 1px solid #333;
-  }
+.categorias ul {
+  padding: 0;
+  list-style: none;
+}
 
-  .categorias form {
-    display: flex;
-    gap: 8px;
-    margin-top: 12px;
-  }
+.categorias li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #333;
+}
 
-  .categorias input {
-    flex: 1;
-    padding: 8px;
-  }
-  .menu {
-    display: flex;
-    gap: 16px;
-  }
+.categorias form {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
 
-  .menu a {
-    color: #f2f2f2;
-    text-decoration: none;
-  }
+.categorias input {
+  flex: 1;
+  padding: 8px;
+}
 
-  .menu a.active {
-    color: #c6ff00;
-    font-weight: 600;
-  }
+/* ---------- Menú ---------- */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+}
 
-  .admin {
-    padding: 16px;
-    background: #1e1e1e;
-    border-radius: 8px;
-  }
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+}
 
-  .admin table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.menu a:hover,
+.menu a.active {
+  color: #c6ff00;
+  border-bottom-color: #c6ff00;
+}
 
-  .admin th,
-  .admin td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #333;
-  }
+/* ---------- Admin de productos ---------- */
+.admin {
+  padding: 16px;
+  background: #1e1e1e;
+  border-radius: 8px;
+}
 
-  .admin form {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 8px;
-  }
+.admin table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-  .admin input,
-  .admin select {
-    padding: 8px;
-  }
+.admin th,
+.admin td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
 
-  .acciones {
-    display: flex;
-    gap: 8px;
-  }
+.admin form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.admin input,
+.admin select {
+  padding: 8px;
+}
+
+.acciones {
+  display: flex;
+  gap: 8px;
 }
