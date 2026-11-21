@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { obtenerProductos } from "../api";
 import Buscador from "./Buscador";
 import CamisaCard from "./CamisaCard";
+import { obtenerProductos, mensajeDeError } from "../api";
 
 function Catalogo({ onAgregar }) {
     const [camisas, setCamisas] = useState([]);
@@ -12,7 +13,7 @@ function Catalogo({ onAgregar }) {
     useEffect(() => {
         obtenerProductos()
             .then((datos) => setCamisas(datos))
-            .catch((e) => setError(e.message))
+            .catch((e) => setError(mensajeDeError(e)))
             .finally(() => setCargando(false));
     }, []);
 
