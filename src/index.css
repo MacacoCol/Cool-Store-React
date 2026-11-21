@@ -126,3 +126,52 @@ button {
     flex: 1;
     padding: 8px;
   }
+  .menu {
+    display: flex;
+    gap: 16px;
+  }
+
+  .menu a {
+    color: #f2f2f2;
+    text-decoration: none;
+  }
+
+  .menu a.active {
+    color: #c6ff00;
+    font-weight: 600;
+  }
+
+  .admin {
+    padding: 16px;
+    background: #1e1e1e;
+    border-radius: 8px;
+  }
+
+  .admin table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .admin th,
+  .admin td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+
+  .admin form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 8px;
+  }
+
+  .admin input,
+  .admin select {
+    padding: 8px;
+  }
+
+  .acciones {
+    display: flex;
+    gap: 8px;
+  }
+}
