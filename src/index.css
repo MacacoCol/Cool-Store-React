@@ -95,3 +95,34 @@ button {
 
 .error {
   color: #ff6b6b;
+  .categorias {
+    margin-top: 32px;
+    padding: 16px;
+    background: #1e1e1e;
+    border-radius: 8px;
+  }
+
+  .categorias ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .categorias li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #333;
+  }
+
+  .categorias form {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .categorias input {
+    flex: 1;
+    padding: 8px;
+  }
