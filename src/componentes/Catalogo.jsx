@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import { obtenerProductos } from "../api";
+import { obtenerProductos, mensajeDeError } from "../api";
 import Buscador from "./Buscador";
 import CamisaCard from "./CamisaCard";
-import { obtenerProductos, mensajeDeError } from "../api";
 
 function Catalogo({ onAgregar }) {
     const [camisas, setCamisas] = useState([]);
