@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import Header from "./componentes/Header";
 import Catalogo from "./componentes/Catalogo";
-import Carrito from "./componentes/Carrito";
 import Categorias from "./componentes/Categorias";
+import Productos from "./componentes/Productos";
+import Carrito from "./componentes/Carrito";
+
 function App() {
   const [carrito, setCarrito] = useState([]);
 
@@ -36,9 +39,20 @@ function App() {
       <>
         <Header cantidadCarrito={cantidadTotal} />
         <main className="contenido">
-          <Catalogo onAgregar={agregar} />
-          <Categorias />
-          <Carrito items={carrito} onVaciar={() => setCarrito([])} />
+          <Routes>
+            <Route
+                path="/"
+                element={
+                  <>
+                    <Catalogo onAgregar={agregar} />
+                    <Carrito items={carrito} onVaciar={() => setCarrito([])} />
+                  </>
+                }
+            />
+            <Route path="/categorias" element={<Categorias />} />
+            <Route path="/admin/productos" element={<Productos />} />
+            <Route path="*" element={<p>Página no encontrada.</p>} />
+          </Routes>
         </main>
       </>
   );
