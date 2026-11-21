@@ -25,4 +25,17 @@ export async function crearCategoria(categoria) {
 
 export async function eliminarCategoria(id) {
     await cliente.delete(`/categorias/${id}`);
+    export async function crearProducto(producto) {
+        const respuesta = await cliente.post("/productos", producto);
+        return respuesta.data;
+    }
+
+    export async function actualizarProducto(id, producto) {
+        const respuesta = await cliente.put(`/productos/${id}`, producto);
+        return respuesta.data;
+    }
+
+    export async function eliminarProducto(id) {
+        await cliente.delete(`/productos/${id}`);
+    }
 }
