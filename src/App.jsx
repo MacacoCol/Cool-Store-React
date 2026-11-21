@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./componentes/Header";
 import Catalogo from "./componentes/Catalogo";
 import Carrito from "./componentes/Carrito";
-
+import Categorias from "./componentes/Categorias";
 function App() {
   const [carrito, setCarrito] = useState([]);
 
@@ -37,6 +37,7 @@ function App() {
         <Header cantidadCarrito={cantidadTotal} />
         <main className="contenido">
           <Catalogo onAgregar={agregar} />
+          <Categorias />
           <Carrito items={carrito} onVaciar={() => setCarrito([])} />
         </main>
       </>
