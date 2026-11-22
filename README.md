@@ -1,16 +1,43 @@
-# React + Vite
+# Cool Store React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Front en React de la tienda de camisetas **Cool Studio**. Consume la API REST de `Cool-Store-API`.
+Proyecto formativo ADSO – SENA (ficha 3186696).
 
-Currently, two official plugins are available:
+## Tecnologías
+- React + Vite
+- React Router
+- Axios
+- SweetAlert2
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Requisitos
+- Node.js
+- La API corriendo en http://localhost:8080 (ver repo del backend)
 
-## React Compiler
+## Cómo ejecutarlo
+```bash
+npm install
+npm run dev
+```
+Abrir la URL que muestre Vite (normalmente http://localhost:5173).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Opcional: crear un archivo `.env` con la URL de la API:
+```
+VITE_API_URL=http://localhost:8080/api
+```
 
-## Expanding the Oxlint configuration
+## Páginas
+| Ruta | Descripción |
+|---|---|
+| `/` | Catálogo con buscador y carrito |
+| `/categorias` | Listar, crear y eliminar categorías |
+| `/admin/productos` | Crear, editar y eliminar productos |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Repositorios del proyecto
+| Repositorio | Descripción |
+|---|---|
+| [Cool-Store-React](https://github.com/MacacoCol/Cool-Store-React) | Front en React (este repo) |
+| [Cool-Store-API](https://github.com/MacacoCol/Cool-Store-API) | Backend Spring Boot + MariaDB |
+| [Cool-Store-Sena-](https://github.com/MacacoCol/Cool-Store-Sena-) | Front inicial en HTML, CSS y JavaScript |
+
+## Autor
+Santiago García Castañeda
